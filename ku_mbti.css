@@ -15,20 +15,42 @@ a{text-decoration: none;}
     background-color: white;
     margin: 40px 0 0 0; 
     padding: 10px;
-    position: relative;
 }
 
 
-/* 초기화면 */
+/********** 초기화면 **********/
+header{
+    position: relative;
+}
+/* 제목 (건국 MBTI) */
 #title{
     text-align: center;
     padding: 50px 0 60px 0;
 }
+/* 설명 (당신의 성격유형을...) */
 #expln{
     text-align: center;
     padding: 10px 0 350px 0;
 
 }
+
+
+/********** 질문화면 **********/
+/* 각 페이지 */
+.page{
+    display: none;
+    position: relative;
+}
+/* 이전버튼 */
+.fa-circle-chevron-left{
+    position: absolute;
+    color: #d0ebca;
+    top: 10px;
+    left: 10px;
+    font-size: 40px;
+}
+
+/* 다음버튼 */
 .next-btn .button{
     background-color: white;
     border: none;
@@ -36,12 +58,12 @@ a{text-decoration: none;}
     border-color: #eaeaea;
     font-family: "맑은 고딕", Gothic, sans-serif;
 }
+/* 다음버튼의 div영역 */
 .next-btn{
-    top: 598px;
-    left: 180px;    
+    top: 575px;
+    /* left: 180px; */
     width: 240px;
     height: 40px;
-    margin: 0 auto;
     position: absolute;
     border-style: solid;
     border-width: 1px;
@@ -51,8 +73,10 @@ a{text-decoration: none;}
     line-height: 40px;
 }
 
+/* 질문 */
+.Q{
+    text-align: center;
+    padding: 120px 20px 70px 20px;
+    height: 100px;
 
-/* 테스트페이지 */
-.page{
-    display: none;
 }
