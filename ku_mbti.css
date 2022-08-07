@@ -11,10 +11,11 @@ a{text-decoration: none;}
 
 /* 페이지 감싸는 영역 */
 #page-wrapper{
-    height: 660px;
+    height: 800px;
     background-color: white;
     margin: 40px 0 0 0; 
     padding: 10px;
+    overflow:hidden;
 }
 
 
@@ -79,4 +80,54 @@ header{
     padding: 120px 20px 70px 20px;
     height: 100px;
 
+}
+
+.result{
+    border-radius:5px;
+    border-style:solid;
+    border-width:1px;
+    border-color:gray;
+    margin-bottom:5px;
+    text-align: center;
+    line-height: 40px;
+    overflow:hidden;
+    
+}
+
+#retryButton{
+    background-color: white;
+    border: none;
+    outline: 0;
+    border-color: #eaeaea;
+    font-family: "맑은 고딕", Gothic, sans-serif;
+}
+
+#shareButton{
+    background-color: white;
+    border: none;
+    outline: 0;
+    border-color: #eaeaea;
+    font-family: "맑은 고딕", Gothic, sans-serif;
+}
+
+.percentage{
+    float:left;
+}
+
+.myBar{
+    float:left;
+    width:100%;
+    background-color:#DDDDDD;
+}
+
+progress{
+    height:30px;
+}
+
+#mindBar{
+    width:0;
+    height:30px;
+    line-height:30px;
+    background-color:#8c9cec;
+    text-align:center;
 }

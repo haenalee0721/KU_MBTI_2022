@@ -35,16 +35,43 @@ $(document).ready(function(){
 			$(".page:nth-child("+count+")").hide();
 			$(".page:nth-child(" + (++count) + ")").show();
 			//결과출력
-			$(".page:nth-child(" + count + ")").append("E : "+E)
-			.append("  I : "+I)
-			.append("  S : "+S)
-			.append("  N : "+N)
-			.append("  T : "+T)
-			.append("  F : "+F)
-			.append("  P : "+P)
-			.append("  J : "+J)
-			.append("  O : "+O)
-			.append("  Y : "+Y);
+			$("#Epercentage").append("E : "+E);
+			$("#Ipercentage").append("I : "+I);
+			$("#Npercentage").append("N : "+N);
+			$("#Spercentage").append("S : "+S);
+			$("#Tpercentage").append("T : "+T);
+			$("#Fpercentage").append("F : "+F);
+			$("#Ppercentage").append("P : "+P);
+			$("#Jpercentage").append("J : "+J);
+			$("#Opercentage").append("O : "+O);
+			$("#Ypercentage").append("Y : "+Y);
+
+
+			// $(".page:nth-child(" + count + ")").append("E : "+E)
+			// .append("  I : "+I)
+			// .append("  S : "+S)
+			// .append("  N : "+N)
+			// .append("  T : "+T)
+			// .append("  F : "+F)
+			// .append("  P : "+P)
+			// .append("  J : "+J)
+			// .append("  O : "+O)
+			// .append("  Y : "+Y);
+
+			var elem=document.getElementById("progress-bar");
+			var width=0;
+			var id=setInterval(frame, 10);
+				function frame(){
+					if(width>=100){
+						clearInterval(id);
+						
+					}else{
+						width++;
+						elem.style.width=width+"%";
+						elem.innerHTML=width+"%";
+					}
+				}
+
 			
 		}
 		else{ //문제
