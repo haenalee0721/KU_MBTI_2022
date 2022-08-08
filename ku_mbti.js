@@ -22,6 +22,13 @@ $(document).ready(function(){
 		console.log(point);
 	});
 
+	$("#retryButton").on("click", function(){
+		$("header").show();
+		$(".page:nth-child("+count+")").hide();
+		//여기서 돌아가는건 됐는데 테스트시작 버튼 안눌려짐 ㅜㅜ
+		
+	})
+
 	// 다음페이지 버튼 클릭 시
 	$(".next-btn").on("click", function(){
 		if(count==0){  //메인페이지
@@ -46,32 +53,11 @@ $(document).ready(function(){
 			$("#Opercentage").append("O : "+O);
 			$("#Ypercentage").append("Y : "+Y);
 
-
-			// $(".page:nth-child(" + count + ")").append("E : "+E)
-			// .append("  I : "+I)
-			// .append("  S : "+S)
-			// .append("  N : "+N)
-			// .append("  T : "+T)
-			// .append("  F : "+F)
-			// .append("  P : "+P)
-			// .append("  J : "+J)
-			// .append("  O : "+O)
-			// .append("  Y : "+Y);
-
-			var elem=document.getElementById("progress-bar");
-			var width=0;
-			var id=setInterval(frame, 10);
-				function frame(){
-					if(width>=100){
-						clearInterval(id);
-						
-					}else{
-						width++;
-						elem.style.width=width+"%";
-						elem.innerHTML=width+"%";
-					}
-				}
-
+			document.getElementById('mindProgress').value=parseInt(E);
+			document.getElementById('energyProgress').value=parseInt(N);
+			document.getElementById('natureProgress').value=parseInt(T);
+			document.getElementById('tacticsProgress').value=parseInt(P);
+			document.getElementById('identityProgress').value=parseInt(O);
 			
 		}
 		else{ //문제
