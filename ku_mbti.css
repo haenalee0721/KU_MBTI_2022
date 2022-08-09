@@ -1,0 +1,165 @@
+*{margin: 0; padding: 0;}
+body{width: 600px; margin: 0 auto;}
+body{background-color: #d0ebca;}
+li{list-style: none;}
+a{text-decoration: none;}
+
+
+*{font-family: "맑은 고딕", Gothic, sans-serif;}
+/* 폰트 수정필요 */
+
+
+/* 페이지 감싸는 영역 */
+#page-wrapper{
+    height: 800px;
+    background-color: white;
+    margin: 40px 0 0 0; 
+    padding: 10px;
+    overflow:hidden;
+}
+
+
+/********** 초기화면 **********/
+header{
+    position: relative;
+}
+/* 제목 (건국 MBTI) */
+#title{
+    text-align: center;
+    padding: 50px 0 60px 0;
+}
+/* 설명 (당신의 성격유형을...) */
+#expln{
+    text-align: center;
+    padding: 10px 0 350px 0;
+
+}
+
+
+/********** 질문화면 **********/
+/* 각 페이지 */
+.page{
+    display: none;
+    position: relative;
+}
+/* 이전버튼 */
+.fa-circle-chevron-left{
+    position: absolute;
+    color: #d0ebca;
+    top: 10px;
+    left: 10px;
+    font-size: 40px;
+}
+
+/* 다음버튼 */
+.next-btn .button{
+    background-color: white;
+    border: none;
+    outline: 0;
+    border-color: #eaeaea;
+    font-family: "맑은 고딕", Gothic, sans-serif;
+}
+/* 다음버튼의 div영역 */
+.next-btn{
+    top: 575px;
+    /* left: 180px; */
+    width: 240px;
+    height: 40px;
+    position: absolute;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d7d7d7;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 40px;
+}
+
+/* 질문 */
+.Q{
+    text-align: center;
+    padding: 120px 20px 70px 20px;
+    height: 100px;
+
+}
+
+.result{
+    padding-left:10px;
+    padding-right:10px;
+    border-radius:5px;
+    border-style:solid;
+    border-width:1px;
+    border-color:gray;
+    margin-bottom:5px;
+    text-align: center;
+    line-height: 40px;
+    overflow:hidden;
+    
+}
+
+.percentage{
+    float:left;
+}
+
+.rightpercentage{
+    float:right;
+}
+
+
+/* #mindBar{
+    width:0;
+    height:30px;
+    line-height:30px;
+    background-color:#8c9cec;
+    text-align:center;
+    
+} */
+
+.result-btn{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d7d7d7;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 40px;
+}
+
+#shareButton{
+    background-color: white;
+    border: none;
+    outline: 0;
+    border-color: #eaeaea;
+    font-family: "맑은 고딕", Gothic, sans-serif;
+}
+
+#retryButton{
+    background-color: white;
+    border: none;
+    outline: 0;
+    border-color: #eaeaea;
+    font-family: "맑은 고딕", Gothic, sans-serif;
+}
+
+#resultH1{
+    text-align:center;
+}
+#resultH3{
+    text-align:center;
+}
+/* 결과이미지 가운데정렬 */
+#container2 img{
+    display: block;
+    margin:0 auto;
+ }
+ /* 결과 mbti가운데정렬 */
+ #container1{
+    display: block;
+    margin:0 auto;
+ }
+ .mbti{
+    float:left;
+ }
+ #container1{
+    overflow:hidden;
+     height:20px;
+     width: 40px;
+ }

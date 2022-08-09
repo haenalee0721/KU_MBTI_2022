@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>KU_MBTI</title>
+    <link rel="stylesheet" href="ku_mbti.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="ku_mbti.js"></script>
+</head>
+
+
+<body>
+    <div id="page-wrapper">
+        <header>
+            <div id="title">
+                <h1> 건국 MBTI </h1>
+            </div>
+            <div id="expln">
+                <h3> 당신의 성격 유형을 알아보세요! <br> 결과에 맞는 건국대학교 학과를 <br> 함께 추천해드립니다. </h3>
+            </div>
+            <div class="next-btn">
+                <button type="button" class="button"> 테스트 시작 </button>
+            </div>
+        </header>
+
+        <section>
+            <div id="page1" class="page">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+                <div class="next-btn">
+                    <button type="button" class="button"> 다음 </button>
+                </div>
+                <div class="Q">
+                    <h2> 1. 팀 프로젝트 단톡방에서 내가 첫 마디를 떼는 것이 어렵지 않다. </h2>
+                </div>
+                <p>동의 - - - 비동의</p>
+                <div>
+                    <input type="radio" name="A1" value="100">
+                    <input type="radio" name="A1" value="84">
+                    <input type="radio" name="A1" value="56">
+                    <input type="radio" name="A1" value="20">
+                    <input type="radio" name="A1" value="8">
+                </div>
+            </div>
+
+            <div id="page2" class="page">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+                <div class="next-btn">
+                    <button type="button" class="button"> 다음 </button>
+                </div>
+                <div class="Q">
+                    <h2> 2. 하루하루 스케줄 정리하기를 좋아하는 편이다. </h2>
+                </div>
+                <p>동의 - - - 비동의</p>
+                <div>
+                    <input type="radio" name="A2" value="112">
+                    <input type="radio" name="A2" value="84">
+                    <input type="radio" name="A2" value="60">
+                    <input type="radio" name="A2" value="20">
+                    <input type="radio" name="A2" value="-8">
+                </div>
+            </div>
+
+            <div id="page3" class="page">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+                <div class="next-btn">
+                    <button type="button" class="button"> 다음 </button>
+                </div>
+                <div class="Q">
+                    <h2> 3. 모든 이들의 이야기에 귀 기울이는 사람보다 <br> 자기주장이 뚜렷하고 알맞는 방향으로 이끄는 사람이 더 좋다. </h2>
+                </div>
+                <p>동의 - - - 비동의</p>
+                <div>
+                    <input type="radio" name="A3" value="104">
+                    <input type="radio" name="A3" value="80">
+                    <input type="radio" name="A3" value="52">
+                    <input type="radio" name="A3" value="28">
+                    <input type="radio" name="A3" value="-4">
+                </div>
+            </div>
+
+            <div id="page4" class="page">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+                <div class="next-btn">
+                    <button type="button" class="button"> 다음 </button>
+                </div>
+                <div class="Q">
+                    <h2> 4. 공상을 즐긴다. </h2>
+                </div>
+                <p>동의 - - - 비동의</p>
+                <div>
+                    <input type="radio" name="A4" value="112">
+                    <input type="radio" name="A4" value="80">
+                    <input type="radio" name="A4" value="56">
+                    <input type="radio" name="A4" value="24">
+                    <input type="radio" name="A4" value="-16">
+                </div>
+            </div>
+
+            <div id="page5" class="page">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+                <div class="next-btn">
+                    <button type="button" class="button"> 다음 </button>
+                </div>
+                <div class="Q">
+                    <h2> 5. 수능 영어 과목이 절대평가인 것보다 <br> 상대평가인 것이 더 익숙하다. </h2>
+                </div>
+                <p>동의 - - - 비동의</p>
+                <div>
+                    <input type="radio" name="A5" value="120">
+                    <input type="radio" name="A5" value="80">
+                    <input type="radio" name="A5" value="48">
+                    <input type="radio" name="A5" value="16">
+                    <input type="radio" name="A5" value="-20">
+                </div>
+            </div>
+
+            <div id="page6" class="page">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+                <div class="next-btn">
+                    <button type="button" class="button"> 다음 </button>
+                </div>
+                <div class="Q">
+                    <h2> 6. 휴일에 집에서 휴식을 취하기보다 <br> 사람 만나는 것을 더 즐긴다. </h2>
+                </div>
+                <p>동의 - - - 비동의</p>
+                <div>
+                    <input type="radio" name="A6" value="108">
+                    <input type="radio" name="A6" value="80">
+                    <input type="radio" name="A6" value="56">
+                    <input type="radio" name="A6" value="24">
+                    <input type="radio" name="A6" value="-8">
+                </div>
+            </div>
+
+            <div id="page7" class="page">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+                <div class="next-btn">
+                    <button type="button" class="button"> 다음 </button>
+                </div>
+                <div class="Q">
+                    <h2> 7. 상황에 지배되어 다른 사람에게 관리받기보다 <br> 상황을 통제하거나 관리하는 편이다. </h2>
+                </div>
+                <p>동의 - - - 비동의</p>
+                <div>
+                    <input type="radio" name="A7" value="80">
+                    <input type="radio" name="A7" value="60">
+                    <input type="radio" name="A7" value="48">
+                    <input type="radio" name="A7" value="36">
+                    <input type="radio" name="A7" value="20">
+                </div>
+            </div>
+
+            <div id="page8" class="page">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+                <div class="next-btn">
+                    <button type="button" class="button"> 다음 </button>
+                </div>
+                <div class="Q">
+                    <h2> 8. 수업에 늦은 상황, 고양이가 내게 애교를 부린다. 귀여운 고양이를 뿌리치고 강의를 들으러 간다. </h2>
+                </div>
+                <p>동의 - - - 비동의</p>
+                <div>
+                    <input type="radio" name="A8" value="72">
+                    <input type="radio" name="A8" value="56">
+                    <input type="radio" name="A8" value="48">
+                    <input type="radio" name="A8" value="36">
+                    <input type="radio" name="A8" value="20">
+                </div>
+            </div>
+
+            <div id="page9" class="page">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+                <div class="next-btn">
+                    <button type="button" class="button"> 다음 </button>
+                </div>
+                <div class="Q">
+                    <h2> 9. 현재에 충실한 삶보다 미래를 상상하고 그리는 삶이 더 중요하다. </h2>
+                </div>
+                <p>동의 - - - 비동의</p>
+                <div>
+                    <input type="radio" name="A9" value="84">
+                    <input type="radio" name="A9" value="68">
+                    <input type="radio" name="A9" value="52">
+                    <input type="radio" name="A9" value="32">
+                    <input type="radio" name="A9" value="12">
+                </div>
+            </div>
+
+            <div id="page10" class="page">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+                <div class="next-btn">
+                    <button type="button" class="button"> 다음 </button>
+                </div>
+                <div class="Q">
+                    <h2> 10. 나는 건국문의 위치가 본래 현재 후문이었다는 사실을 알고있다. </h2>
+                </div>
+                <p>동의 - - - 비동의</p>
+                <div>
+                    <input type="radio" name="A10" value="84">
+                    <input type="radio" name="A10" value="76">
+                    <input type="radio" name="A10" value="54">
+                    <input type="radio" name="A10" value="28">
+                    <input type="radio" name="A10" value="8">
+                </div>
+            </div>
+
+            <div id="page11" class="page">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+                <div class="next-btn">
+                    <button type="button" class="button"> 다음 </button>
+                </div>
+                <div class="Q">
+                    <h2> 11. 말을 들어주는 것보다 하는 것이 더 좋다. </h2>
+                </div>
+                <p>동의 - - - 비동의</p>
+                <div>
+                    <input type="radio" name="A11" value="84">
+                    <input type="radio" name="A11" value="72">
+                    <input type="radio" name="A11" value="60">
+                    <input type="radio" name="A11" value="36">
+                    <input type="radio" name="A11" value="4">
+                </div>
+            </div>
+
+            <div id="page12" class="page">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+                <div class="next-btn">
+                    <button type="button" class="button"> 다음 </button>
+                </div>
+                <div class="Q">
+                    <h2> 12. 익숙한 일보단 새로운 일을 도전하는것이 더 좋다. </h2>
+                </div>
+                <p>동의 - - - 비동의</p>
+                <div>
+                    <input type="radio" name="A12" value="84">
+                    <input type="radio" name="A12" value="60">
+                    <input type="radio" name="A12" value="48">
+                    <input type="radio" name="A12" value="20">
+                    <input type="radio" name="A12" value="-4">
+                </div>
+            </div>
+
+            <div id="page13" class="page">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+                <div class="next-btn">
+                    <button type="button" class="button"> 다음 </button>
+                </div>
+                <div class="Q">
+                    <h2> 13. 틀린것은 돌려말하기 보다 명확하게 잘못된 것이라고 말하는 편이다. </h2>
+                </div>
+                <p>동의 - - - 비동의</p>
+                <div>
+                    <input type="radio" name="A13" value="112">
+                    <input type="radio" name="A13" value="80">
+                    <input type="radio" name="A13" value="52">
+                    <input type="radio" name="A13" value="28">
+                    <input type="radio" name="A13" value="-8">
+                </div>
+            </div>
+
+            <div id="page14" class="page">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+                <div class="next-btn">
+                    <button type="button" class="button"> 다음 </button>
+                </div>
+                <div class="Q">
+                    <h2> 14. 시간표를 수강바구니(수강신청) 하루 전에 짜는 것이 불안하다. </h2>
+                </div>
+                <p>동의 - - - 비동의</p>
+                <div>
+                    <input type="radio" name="A14" value="100">
+                    <input type="radio" name="A14" value="80">
+                    <input type="radio" name="A14" value="56">
+                    <input type="radio" name="A14" value="20">
+                    <input type="radio" name="A14" value="-8">
+                </div>
+            </div>
+
+            <div id="page15" class="page">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+                <div class="next-btn">
+                    <button type="button" class="button"> 다음 </button>
+                </div>
+                <div class="Q">
+                    <h2> 15. 현재 KU 캐릭터 (사진첨부) 이전의 KU 캐릭터를 알고있다. </h2>
+                </div>
+                <p>동의 - - - 비동의</p>
+                <div>
+                    <input type="radio" name="A15" value="116">
+                    <input type="radio" name="A15" value="80">
+                    <input type="radio" name="A15" value="56">
+                    <input type="radio" name="A15" value="24">
+                    <input type="radio" name="A15" value="0">
+                </div>
+            </div>
+
+            <div id="page16" class="page">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+                <div class="next-btn">
+                    <button type="button" class="button"> 다음 </button>
+                </div>
+                <div class="Q">
+                    <h2> 16. 생활공간이 정리된 편이다. </h2>
+                </div>
+                <p>동의 - - - 비동의</p>
+                <div>
+                    <input type="radio" name="A16" value="108">
+                    <input type="radio" name="A16" value="72">
+                    <input type="radio" name="A16" value="44">
+                    <input type="radio" name="A16" value="24">
+                    <input type="radio" name="A16" value="-4">
+                </div>
+            </div>
+
+            <div id="page17" class="page">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+                <div class="next-btn">
+                    <button type="button" class="button"> 다음 </button>
+                </div>
+                <div class="Q">
+                    <h2> 17. 일감호에 사는 자라가 좋은 성적을 가져다 준다는 미신을 알고있다.</h2>
+                </div>
+                <p>동의 - - - 비동의</p>
+                <div>
+                    <input type="radio" name="A17" value="80">
+                    <input type="radio" name="A17" value="72">
+                    <input type="radio" name="A17" value="44">
+                    <input type="radio" name="A17" value="28">
+                    <input type="radio" name="A17" value="12">
+                </div>
+            </div>
+
+            <div id="page18" class="page">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+                <div class="next-btn">
+                    <button type="button" class="button"> 다음 </button>
+                </div>
+                <div class="Q">
+                    <h2> 18. 친구에게 고민을 털어놓았을 때 공감보다 해결을 원한다. </h2>
+                </div>
+                <p>동의 - - - 비동의</p>
+                <div>
+                    <input type="radio" name="A18" value="112">
+                    <input type="radio" name="A18" value="80">
+                    <input type="radio" name="A18" value="60">
+                    <input type="radio" name="A18" value="24">
+                    <input type="radio" name="A18" value="-8">
+                </div>
+            </div>
+
+            <div id="page19" class="page">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+                <div class="next-btn">
+                    <button type="button" class="button"> 다음 </button>
+                </div>
+                <div class="Q">
+                    <h2> 19. 동화의 뒷내용을 만들어보는 과제가 나왔다. 벌써부터 어떤 책에 어떤 내용을 쓸지 설렌다. </h2>
+                </div>
+                <p>동의 - - - 비동의</p>
+                <div>
+                    <input type="radio" name="A19" value="120">
+                    <input type="radio" name="A19" value="80">
+                    <input type="radio" name="A19" value="60">
+                    <input type="radio" name="A19" value="32">
+                    <input type="radio" name="A19" value="8">
+                </div>
+            </div>
+
+            <div id="page20" class="page">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+                <div class="next-btn">
+                    <button type="button" class="button"> 다음 </button>
+                </div>
+                <div class="Q">
+                    <h2> 20. 새로운 사람과의 만남에 거리낌이 없다. </h2>
+                </div>
+                <p>동의 - - - 비동의</p>
+                <div>
+                    <input type="radio" name="A20" value="108">
+                    <input type="radio" name="A20" value="80">
+                    <input type="radio" name="A20" value="60">
+                    <input type="radio" name="A20" value="36">
+                    <input type="radio" name="A20" value="-4">
+                </div>
+            </div>
+
+            
+            <div id="result" class="page">
+                <h1 id="resultH1">건국 BTI 결과</h1>
+                <h3 id="resultH3"><결과 유형></h3>
+                <div id="container1">
+                    <div class="mbti" id="first"></div>
+                    <div class="mbti" id="second"></div>
+                    <div class="mbti" id="third"></div>
+                    <div class="mbti" id="fourth"></div>
+                </div>
+                <div id="container2">
+                </div>
+                <div id="container3"></div>
+                <div id="mind" class="result">
+                    <div id="caption">Mind</div>
+                    <div id="explaination">this trait determines how we interact with our environment.</div>
+                    <span id="Epercentage" class="percentage"></span>
+                    <progress value="0" max="100" id="mindProgress"></progress>
+                    <span id="Ipercentage" class="rightpercentage"></span>
+                </div>
+                <div id="energy" class="result">
+                    <div id="caption">Energy</div>
+                    <div id="explaination">This trait shows where we direct our mental energy.</div>
+                    <span id="Npercentage" class="percentage"></span>
+                    <progress value="0" max="100" id="energyProgress"></progress>
+                    <span id="Spercentage" class="rightpercentage"></span>
+                </div>
+                <div id="nature" class="result">
+                    <div id="caption">Nature</div>
+                    <div id="explaination">This trait determines how we make decisions and cope with emotions.</div>
+                    <span id="Tpercentage" class="percentage"></span>
+                    <progress value="0" max="100" id="natureProgress"></progress>
+                    <span id="Fpercentage" class="rightpercentage"></span>
+                </div>
+                <div id="tactics" class="result">
+                    <div id="caption">Tactics</div>
+                    <div id="explaination">This trait reflects our approach to work, planning and decision-making.</div>
+                    <span id="Ppercentage" class="percentage"></span>
+                    <progress value="0" max="100" id="tacticsProgress"></progress>
+                    <span id="Jpercentage" class="rightpercentage"></span>
+                
+                </div>
+                <div id="identity" class="result">
+                    <div id="caption">Identity</div>
+                    <div id="explaination">This trait underpins all others, showing how confident we are in our abilities and decisions.</div>
+                    <span id="Opercentage" class="percentage"></span>
+                    <progress value="0" max="100" id="identityProgress"></progress>
+                    <span id="Ypercentage" class="rightpercentage" ></span>
+                </div>
+                <div class="result-btn">
+                    <button  type="button" id="shareButton">공유하기</button>
+                    <button  type="button" id="retryButton">다시하기</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
