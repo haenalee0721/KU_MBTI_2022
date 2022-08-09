@@ -158,8 +158,9 @@ header{
  .mbti{
     float:left;
  }
+ /* 결과 mbti */
  #container1{
     overflow:hidden;
-     height:20px;
-     width: 40px;
+    height:23px;
+    width: 115px;
  }

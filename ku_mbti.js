@@ -131,6 +131,11 @@ function calculatorResult(){  // 배열확인해서 각각 퍼센트 내기
         }else{
             $("#fourth").text("P");
         }
+		if(O>=50){
+			$("#fifth").text("-O(고인물)");
+		}else{
+			$("#fifth").text("-Y(맑은물)");
+		}
     }
     //mbti 결과이미지 출력 
     function addIMG(){
