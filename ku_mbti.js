@@ -65,13 +65,15 @@ $(document).ready(function(){
             addTEXT2();
 		}
 		else{ //문제
+            while(!checked()){
+                alert("답변을 선택하세요");
+            }
             $(".page:nth-child("+count+")").hide();
 			$(".page:nth-child(" + (++count) + ")").show();
-
 		}
 		
 	});
-
+    
 	// 이전페이지 버튼 클릭 시
 	$(".fa-circle-chevron-left").on("click", function(){
 		if(count==1){
@@ -85,7 +87,16 @@ $(document).ready(function(){
 		}
 	});
 
-
+//라디오버튼 체크 확인함수
+function checked(){
+    
+    for(var i=0;i<5;i++){
+        if($("input[name=A"+count+"]").checked){
+            return true;
+        }
+        else{false;}
+    }
+}
 
 function calculatorResult(){  // 배열확인해서 각각 퍼센트 내기
 
