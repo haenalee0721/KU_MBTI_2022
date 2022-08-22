@@ -7,6 +7,10 @@ $(document).ready(function(){
 	var E,I,S,N,F,T,P,J,O,Y;  // 각각 퍼센트
 	var Qnum=20;  // 문제개수
 
+    //배열 초기화
+    for(var i=0;i<20;i++){
+        point[i]=1000;
+    }
 
 	// 다음버튼의 가로위치 조정
 	var widthP = $("#page-wrapper").width();
@@ -65,15 +69,18 @@ $(document).ready(function(){
             addTEXT2();
 		}
 		else{ //문제
-            while(!checked()){
+            if(!checked()){
                 alert("답변을 선택하세요");
             }
-            $(".page:nth-child("+count+")").hide();
-			$(".page:nth-child(" + (++count) + ")").show();
+            else{
+                $(".page:nth-child("+count+")").hide();
+			    $(".page:nth-child(" + (++count) + ")").show();
+            }
+            
 		}
 		
 	});
-    
+
 	// 이전페이지 버튼 클릭 시
 	$(".fa-circle-chevron-left").on("click", function(){
 		if(count==1){
@@ -86,16 +93,14 @@ $(document).ready(function(){
 			$(".page:nth-child(" + (--count) + ")").show();
 		}
 	});
-
-//라디오버튼 체크 확인함수
-function checked(){
-    
-    for(var i=0;i<5;i++){
-        if($("input[name=A"+count+"]").checked){
+ 
+   //라디오버튼 체크 확인함수
+   function checked(){
+        var Check = point[count-1];
+        if(Check!=1000){
             return true;
-        }
-        else{false;}
-    }
+   }else
+            return false;
 }
 
 function calculatorResult(){  // 배열확인해서 각각 퍼센트 내기
@@ -142,12 +147,13 @@ function calculatorResult(){  // 배열확인해서 각각 퍼센트 내기
         }else{
             $("#fourth").text("P");
         }
-		if(O>=50){
+        if(O>=50){
 			$("#fifth").text("-O(고인물)");
 		}else{
 			$("#fifth").text("-Y(맑은물)");
 		}
     }
+ 
     //mbti 결과이미지 출력 
     function addIMG(){
         var img = $("<img/>");
