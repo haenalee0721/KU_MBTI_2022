@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'IM_Hyemin-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *{margin: 0; padding: 0;}
 body{width: 600px; margin: 0 auto;}
 body{background-color: #d0ebca;}
@@ -5,7 +12,7 @@ li{list-style: none;}
 a{text-decoration: none;}
 
 
-*{font-family: "맑은 고딕", Gothic, sans-serif;}
+*{font-family: "IM_Hyemin-Bold", "맑은 고딕", Gothic, sans-serif;}
 /* 폰트 수정필요 */
 
 
@@ -15,7 +22,16 @@ a{text-decoration: none;}
     background-color: white;
     margin: 40px 0 0 0; 
     padding: 10px;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ffffff;
+    border-radius: 35px;
+
+    box-shadow: 7px 7px 7px #cadec6;
+
     overflow:hidden;
+
 }
 
 
@@ -32,7 +48,6 @@ header{
 #expln{
     text-align: center;
     padding: 10px 0 350px 0;
-
 }
 
 
@@ -50,6 +65,7 @@ header{
     top: 10px;
     left: 10px;
     font-size: 40px;
+    filter: drop-shadow(1px 1px 1px #cadec6);
 }
 
 /* 다음버튼 */
@@ -83,6 +99,43 @@ header{
 
 }
 
+
+/* 동의비동의 */
+.AGREE{
+    position: relative;
+    padding-bottom: 20px;
+}
+.agree{
+    position: absolute;
+    left: 93px;
+}
+.disagree{
+    position: absolute;
+    float: right;
+    right: 80px;
+}
+
+/* 라디오버튼 */
+.fa-circle-dot{
+    color: #d7d7d7;
+    position: absolute;
+}
+.size1{
+    font-size: 38px;
+}
+.size2{
+    font-size: 44px;
+}
+.size3{
+    font-size: 50px;
+}
+.radioButton{
+    position: relative;
+}
+.radioButton label{
+    position: absolute;
+}
+=======
 .result{
     padding-left:10px;
     padding-right:10px;
@@ -166,3 +219,4 @@ header{
     height:23px;
     width: 116px;
  }
+
