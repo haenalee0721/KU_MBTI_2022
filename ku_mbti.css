@@ -18,16 +18,20 @@ a{text-decoration: none;}
 
 /* 페이지 감싸는 영역 */
 #page-wrapper{
-    height: 660px;
+    height: 1300px;
     background-color: white;
     margin: 40px 0 0 0; 
     padding: 10px;
+
     border-style: solid;
     border-width: 1px;
     border-color: #ffffff;
     border-radius: 35px;
 
     box-shadow: 7px 7px 7px #cadec6;
+
+    overflow:hidden;
+
 }
 
 
@@ -52,6 +56,7 @@ header{
 .page{
     display: none;
     position: relative;
+ 
 }
 /* 이전버튼 */
 .fa-circle-chevron-left{
@@ -94,6 +99,7 @@ header{
 
 }
 
+
 /* 동의비동의 */
 .AGREE{
     position: relative;
@@ -129,3 +135,88 @@ header{
 .radioButton label{
     position: absolute;
 }
+=======
+.result{
+    padding-left:10px;
+    padding-right:10px;
+    border-radius:5px;
+    border-style:solid;
+    border-width:1px;
+    border-color:gray;
+    margin-bottom:5px;
+    text-align: center;
+    line-height: 40px;
+    overflow:hidden;
+    
+}
+
+.percentage{
+    float:left;
+}
+
+.rightpercentage{
+    float:right;
+}
+
+
+/* #mindBar{
+    width:0;
+    height:30px;
+    line-height:30px;
+    background-color:#8c9cec;
+    text-align:center;
+    
+} */
+
+.result-btn{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d7d7d7;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 40px;
+}
+
+#shareButton{
+    background-color: white;
+    border: none;
+    outline: 0;
+    border-color: #eaeaea;
+    font-family: "맑은 고딕", Gothic, sans-serif;
+}
+
+#retryButton{
+    background-color: white;
+    border: none;
+    outline: 0;
+    border-color: #eaeaea;
+    font-family: "맑은 고딕", Gothic, sans-serif;
+}
+
+#resultH1{
+    text-align:center;
+}
+#resultH3{
+    text-align:center;
+}
+/* 결과이미지 가운데정렬 */
+#container2 img{
+    display: block;
+    margin:0 auto;
+ }
+ /* 결과 mbti가운데정렬 */
+ #container1{
+    display: block;
+    margin:0 auto;
+ }
+ .mbti{
+    float:left;
+ }
+ /* 결과 mbti */
+ /* 고쳤는데 고친게 없다? */
+ #container1{
+    overflow:hidden;
+    height:23px;
+    width: 116px;
+ }
+

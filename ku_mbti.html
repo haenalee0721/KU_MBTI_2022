@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <title>KU_MBTI</title>
     <link rel="stylesheet" href="ku_mbti.css">
+    <!-- css주소 건드린거같기도..? -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="ku_mbti.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="ku_mbti.js"></script>
 </head>
 
 
@@ -529,7 +530,58 @@
 
             
             <div id="result" class="page">
-                결과</br>
+                <h1 id="resultH1">건국 BTI 결과</h1>
+                <h3 id="resultH3"><결과 유형></h3>
+                <div id="container1">
+                    <div class="mbti" id="first"></div>
+                    <div class="mbti" id="second"></div>
+                    <div class="mbti" id="third"></div>
+                    <div class="mbti" id="fourth"></div>
+                    <div class="mbti" id="fifth"></div>
+                </div>
+                <div id="container2">
+                </div>
+                <div id="container3"></div>
+                <div id="mind" class="result">
+                    <div id="caption">Mind</div>
+                    <div id="explaination">this trait determines how we interact with our environment.</div>
+                    <span id="Epercentage" class="percentage"></span>
+                    <progress value="0" max="100" id="mindProgress"></progress>
+                    <span id="Ipercentage" class="rightpercentage"></span>
+                </div>
+                <div id="energy" class="result">
+                    <div id="caption">Energy</div>
+                    <div id="explaination">This trait shows where we direct our mental energy.</div>
+                    <span id="Npercentage" class="percentage"></span>
+                    <progress value="0" max="100" id="energyProgress"></progress>
+                    <span id="Spercentage" class="rightpercentage"></span>
+                </div>
+                <div id="nature" class="result">
+                    <div id="caption">Nature</div>
+                    <div id="explaination">This trait determines how we make decisions and cope with emotions.</div>
+                    <span id="Tpercentage" class="percentage"></span>
+                    <progress value="0" max="100" id="natureProgress"></progress>
+                    <span id="Fpercentage" class="rightpercentage"></span>
+                </div>
+                <div id="tactics" class="result">
+                    <div id="caption">Tactics</div>
+                    <div id="explaination">This trait reflects our approach to work, planning and decision-making.</div>
+                    <span id="Ppercentage" class="percentage"></span>
+                    <progress value="0" max="100" id="tacticsProgress"></progress>
+                    <span id="Jpercentage" class="rightpercentage"></span>
+                
+                </div>
+                <div id="identity" class="result">
+                    <div id="caption">Identity</div>
+                    <div id="explaination">This trait underpins all others, showing how confident we are in our abilities and decisions.</div>
+                    <span id="Opercentage" class="percentage"></span>
+                    <progress value="0" max="100" id="identityProgress"></progress>
+                    <span id="Ypercentage" class="rightpercentage" ></span>
+                </div>
+                <div class="result-btn">
+                    <button  type="button" id="shareButton">공유하기</button>
+                    <button  type="button" id="retryButton">다시하기</button>
+                </div>
             </div>
         </section>
     </div>
