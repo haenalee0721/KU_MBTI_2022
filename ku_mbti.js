@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 
 	//--------------변수------------------
@@ -8,9 +7,9 @@ $(document).ready(function(){
 	var Qnum=20;  // 문제개수
 
     //배열 초기화
-    for(var i=0;i<20;i++){
-        point[i]=1000;
-    }
+	for(var i=0;i<20;i++){
+		point[i]=1000;
+	}
 
 	// 다음버튼의 가로위치 조정
 	var widthP = $("#page-wrapper").width();
@@ -22,16 +21,70 @@ $(document).ready(function(){
     $(".prev-btn")
     .css('left',((widthP-widthB)/10+'px'));
 
+	// 라디오버튼 가로, 세로위치 조정
+	var size1 = 38;
+	var size2 = 44;
+	var size3 = 50;
+	var ws = 15;
+	$(".radioButton>label:nth-child(1)").css('left', ((widthP-size1)/2-size2-size3 - ws*2)+'px');
+	$(".radioButton>label:nth-child(2)").css('left', ((widthP-size1)/2-size2 - ws)+'px');
+	$(".radioButton>label:nth-child(3)").css('left', ((widthP-size1)/2)+'px');
+	$(".radioButton>label:nth-child(4)").css('left', ((widthP-size1)/2+size1 + ws)+'px');
+	$(".radioButton>label:nth-child(5)").css('left', ((widthP-size1)/2+size1+size2 + ws*2)+'px');
 
+	$(".radioButton>label:nth-child(2)").css('top', '3px');
+	$(".radioButton>label:nth-child(3)").css('top', '6px');
+	$(".radioButton>label:nth-child(4)").css('top', '3px');
+
+	// 실제 라디오버튼 안보이게
+	$("input:radio").hide();
+
+
+	// 버튼종류 마우스오버
+	$(".BTN").mouseover(function(){
+		$(this).css('cursor', 'pointer');
+	})
 
 	// 라디오버튼 클릭 시
 	$("input:radio").on("click", function(){
+		// 배열에 가중치 입력
 		var Check = $("input[name=A"+count+"]:checked").val();
 		point[count-1] = Check;
+
+		// 라디오버튼 색 변화
+		var checkedIndex = $("input[name=A"+count+"]:checked").index();
+		var radioColor;
+		switch (checkedIndex){
+			case 0:
+				radioColor = '#619bd2';
+				break;
+			case 1:
+				radioColor = '#78a76e';
+				break;
+			case 2:
+				radioColor = '#dcd474';
+				break;
+			case 3:
+				radioColor = '#dc9366';
+				break;
+			case 4:
+				radioColor = '#cf7372';
+				break;
+		}
+		for(var i=0; i<5; i++){
+			if(i==checkedIndex){
+				$("#page"+count+">.radioButton i").eq(i).css('color', radioColor);
+			}
+			else{
+				$("#page"+count+">.radioButton i").eq(i).css('color', '#d7d7d7');
+			}
+		}
+
+		// 콘솔창 테스트
 		console.log(point);
 	});
 
-    //시작버튼 클릭시
+	//시작버튼 클릭시
     $(".start-btn").on("click", function(){
         $("header").hide();
         $(".page:nth-child(1)").show();
@@ -39,10 +92,12 @@ $(document).ready(function(){
     });
 
 	$("#retryButton").on("click", function(){
-		$("header").show();
-		$(".page:nth-child("+count+")").hide();
-		//여기서 돌아가는건 됐는데 테스트시작 버튼 안눌려짐 ㅜㅜ
-		
+		// $("header").show();
+		// $(".page:nth-child("+count+")").hide();
+		// 여기서 돌아가는건 됐는데 테스트시작 버튼 안눌려짐 ㅜㅜ
+		location.reload();
+		window.scrollTo(0,0);
+		// 홈버튼 돌아가는 방식이랑 똑같이 구현해서 해결(09.07)
 	})
 
 	// 다음페이지 버튼 클릭 시
@@ -91,8 +146,8 @@ $(document).ready(function(){
 		}
 		
 	});
-     //홈버튼 클릭시
-     $(".home-btn").on("click", function(){
+    //홈버튼 클릭시 // 홈버튼 클래스이름변경
+    $(".fa-house").on("click", function(){
         // while(count!=0){
         //     $(".page:nth-child("+count+")").hide();
         //     count--;
@@ -100,6 +155,7 @@ $(document).ready(function(){
 		
         // $("header").show();
         location.reload();
+		window.scrollTo(0,0);
 	});
 
 	// 이전페이지 버튼 클릭 시
@@ -114,38 +170,39 @@ $(document).ready(function(){
 			$(".page:nth-child(" + (--count) + ")").show();
 		}
 	});
- 
-   //라디오버튼 체크 확인함수
-   function checked(){
+
+    //라디오버튼 체크 확인함수
+    function checked(){
         var Check = point[count-1];
         if(Check!=1000){
             return true;
-   }else
+		}
+		else
             return false;
-}
+	}
 
-function calculatorResult(){  // 배열확인해서 각각 퍼센트 내기
+	function calculatorResult(){  // 배열확인해서 각각 퍼센트 내기
 
-	//EI
-	E=(Number(point[0])+Number(point[19])+Number(point[5])+Number(point[10]))/4;
-	I=100-E;
+		//EI
+		E=(Number(point[0])+Number(point[19])+Number(point[5])+Number(point[10]))/4;
+		I=100-E;
 
-	//NS
-	N=(Number(point[18])+Number(point[3])+Number(point[11])+Number(point[8]))/4;
-	S=100-N;
+		//NS
+		N=(Number(point[18])+Number(point[3])+Number(point[11])+Number(point[8]))/4;
+		S=100-N;
 
-	//TF
-	T=(Number(point[7])+Number(point[17])+Number(point[12])+Number(point[2]))/4;
-	F=100-T;
+		//TF
+		T=(Number(point[7])+Number(point[17])+Number(point[12])+Number(point[2]))/4;
+		F=100-T;
 
-	//PJ
-	J=(Number(point[13])+Number(point[1])+Number(point[15])+Number(point[6]))/4;
-	P=100-J;
+		//PJ
+		J=(Number(point[13])+Number(point[1])+Number(point[15])+Number(point[6]))/4;
+		P=100-J;
 
-	//고맑
-	O=(Number(point[9])+Number(point[16])+Number(point[14])+Number(point[4]))/4;
-	Y=100-O;
-}
+		//고맑
+		O=(Number(point[9])+Number(point[16])+Number(point[14])+Number(point[4]))/4;
+		Y=100-O;
+	}
 
     function calcMBTI(){
         if(E>=50){

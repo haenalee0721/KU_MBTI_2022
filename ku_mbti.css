@@ -18,9 +18,9 @@ a{text-decoration: none;}
 
 /* 페이지 감싸는 영역 */
 #page-wrapper{
-    height: 1300px;
+    height: 660px;
     background-color: white;
-    margin: 40px 0 0 0; 
+    margin: 40px 0 40px 0; 
     padding: 10px;
 
     border-style: solid;
@@ -29,10 +29,8 @@ a{text-decoration: none;}
     border-radius: 35px;
 
     box-shadow: 7px 7px 7px #cadec6;
-
-    overflow:hidden;
-
 }
+
 
 
 /********** 초기화면 **********/
@@ -59,21 +57,23 @@ header{
  
 }
 /*홈버튼*/
-.home-btn{
+.fa-house{
     position: absolute;
-    opacity: 0.4;
-    top:10px;
-    left:530px;
+    top: 10px;
+    right: 10px;
+    color: #d0ebca;
+    font-size: 40px;
+    filter: drop-shadow(1px 1px 1px #cadec6);
 }
-/* 이전버튼 */
-.fa-circle-chevron-left{
+/* 이전버튼(사용하지 않음) */
+/* .fa-circle-chevron-left{
     position: absolute;
     color: #d0ebca;
     top: 10px;
     left: 10px;
     font-size: 40px;
     filter: drop-shadow(1px 1px 1px #cadec6);
-}
+} */
 /* 시작버튼 */
 .start-btn{
     background-color: white;
@@ -265,3 +265,23 @@ header{
     width: 116px;
  }
 
+
+#result{
+    overflow: auto;
+    height: 660px;
+    padding-left: 12px;
+}
+#result::-webkit-scrollbar{
+    width: 12px;
+}
+#result::-webkit-scrollbar-thumb{
+    background-color: #aacca2;
+    border-radius: 12px;
+    background-clip: padding-box;
+    border: 3px solid transparent;
+}
+
+#result::-webkit-scrollbar-track{
+    /* background-color: #eaeaea; */
+    background-color: transparent;
+} 
